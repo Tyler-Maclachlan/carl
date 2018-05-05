@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-html, body, .container-fluid    {
+html, body, .container-fluid     {
     height: 100%;
     width: 100%;
     padding: 0;
@@ -7,9 +7,15 @@ html, body, .container-fluid    {
     background-color: #252525;
 }
 
+.row    {
+    padding: 0;
+    margin: 0;
+}
+
 .welcome    {
     height: 100%;
     width: 100%;
+    z-index: 100;
     background-color: white;
     position: fixed;
 }
@@ -20,7 +26,7 @@ html, body, .container-fluid    {
 }
 
 .welcome-animate    {
-    animation: welcome 3s linear .5s forwards, exit 3s linear 5s forwards;
+    animation: welcome 3s linear forwards, exit 3s linear 5s forwards;
 }
 
 @keyframes welcome  {

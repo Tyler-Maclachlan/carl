@@ -4,10 +4,12 @@ import { jquery } from 'jquery';
 import { bootstrap } from 'bootstrap';
 
 import { AppComponent } from './app.component';
+import { CarlComponent } from './carl/carl.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarlComponent
   ],
   imports: [
     BrowserModule
