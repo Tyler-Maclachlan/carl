@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+html, body, .container-fluid    {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #252525;
+}
+
+.welcome    {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+}
+
+.welcome h1 {
+    font-style: italic;
+    opacity: 0;
+}
+
+.welcome-animate    {
+    animation: welcome 3s linear .5s forwards, exit 3s linear 5s forwards;
+}
+
+@keyframes welcome  {
+    50% {
+        opacity: 1;
+    }
+    to  {
+        transform: scale(4, 4);
+    }
+}
