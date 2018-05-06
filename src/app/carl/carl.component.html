@@ -1,4 +1,4 @@
-<div [ngStyle]="{'color': carl.color, 'cursor': 'pointer'}">
+<div class="noselect" [ngStyle]="{'color': carl.color, 'cursor': 'pointer'}" (click)="updateClick()">
   <p>
     {{carl.name}}
   </p>
@@ -6,7 +6,10 @@
     {{carl.age}}
   </p>
   <p>
-    {{carl.timeToDeath}}
+    {{carl.food}}
+  </p>
+  <p>
+    {{carl.maxFood}}
   </p>
   <p>
     {{carl.clicks}}
@@ -14,10 +17,7 @@
   <p>
     {{carl.uniqueClicks}}
   </p>
-  <p>
-    {{carl.kids}}
-  </p>
-  <p>
-    {{carl.color}}
-  </p>
+  <div class="progress" style="height: 20px; font-size: 1.4rem;">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [ngStyle]="{'width': carl.life + '%', 'background-color': getColor()}" aria-valuemin="0" aria-valuemax="100">{{carl.life}}% Alive</div>
+  </div>
 </div>
